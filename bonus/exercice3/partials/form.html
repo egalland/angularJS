@@ -1,0 +1,33 @@
+<div class="form">
+  <form novalidate name="validateForm" ng-submit="submit()">
+    <ul>
+      <li>
+        <label for="userName">Nom : </label><input type="text" ng-model="userName" name="userName" id="userName" required />
+        <span ng-show="validateForm.userName.$touched && validateForm.userName.$invalid">Le nom n'est pas valide.</span>
+      </li>
+      <li>
+        <label for="userEmail">Email : </label><input type="email" ng-model="userEmail" name="userEmail" id="userEmail" required />
+        <span ng-show="validateForm.userEmail.$touched && validateForm.userEmail.$invalid">Le mail n'est pas valide.</span>
+      </li>
+      <li>
+        <label for="subject">Sujet : </label><input type="text" ng-model="subject" name="subject" id="subject" required />
+        <span ng-show="validateForm.subject.$touched && validateForm.subject.$invalid">Le sujet n'est pas valide.</span>
+      </li>
+      <li>
+        <label for="textArea">Texte : </label><textarea ng-model="textArea" name="textArea" id="textArea" required ></textarea>
+        <span ng-show="validateForm.textArea.$touched && validateForm.textArea.$invalid">Le texte n'est pas valide.</span>
+      </li>
+      <li>
+        <input type="submit" id="submit" value="Envoyer" />
+      </li>
+    </ul>
+  </form>
+  <div>
+    <ul>
+      <li ng-repeat="x in obj"><a href="#!/sujet">{{x.sujet}}</a></li>
+    </ul>
+  </div>
+  <p>
+    {{obj}}
+  </p>
+</div>

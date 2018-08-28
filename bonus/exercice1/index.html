@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercice 1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+  <style>
+  input.ng-invalid{
+    background: red;
+  }
+  input.ng-valid{
+    background-color: green;
+  }
+</style>
+</head>
+<body ng-app>
+  <form novalidate>
+    <input type="email" ng-model="email" required />
+  </form>
+</body>
+</html>

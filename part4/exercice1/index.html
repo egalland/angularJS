@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Exercice 1</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+<body>
+  <div  ng-app="myCount" ng-controller="myCtrl">
+    <input ng-click="plus()" type="button" value="+" />
+    <input ng-click="minus()" type="button" value="-" />
+    <p>{{ count }}</p>
+  </div>
+</body>
+</html>
